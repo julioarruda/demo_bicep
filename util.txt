@@ -1,0 +1,11 @@
+az login
+
+az account set --subscription subID
+
+az deployment group create -f ./storage.bicep -g demobiceplive
+
+
+https://bicepdemo.z22.web.core.windows.net/
+
+
+https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep
