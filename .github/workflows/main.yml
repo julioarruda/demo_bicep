@@ -13,3 +13,11 @@ jobs:
       - name: Run a multi-line script
         run: |
           az bicep install
+
+      - uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Run a multi-line script
+        run: |
+          az deployment group create -f ./storage.bicep -g demobiceplive --parameters prefix=jarr
